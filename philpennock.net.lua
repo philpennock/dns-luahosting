@@ -12,7 +12,8 @@ local nl_services_ipv6 = '2a02:898:31::48:4558:5345:5256'
 local subdomains_to_services = { 'www', 'cands', 'demo' }
 
 for val in values(subdomains_to_services) do
-  a_and_aaaa(val, nl_services_ipv4, nl_services_ipv6, ttl)
+  a(val, nl_services_ipv4, ttl)
+  aaaa(val, nl_services_ipv6, ttl)
 end
 
 redirect('conf', 'http://abstractions.io/')
