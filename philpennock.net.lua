@@ -9,7 +9,7 @@ local ttl = 300
 local nl_services_ipv4 = '94.142.241.93'
 local nl_services_ipv6 = '2a02:898:31::48:4558:5345:5256'
 
-local subdomains_to_services = { 'www', 'cands', 'demo' }
+local subdomains_to_services = { 'www', 'cands', 'demo', 'fred' }
 
 for val in values(subdomains_to_services) do
   a(val, nl_services_ipv4, ttl)
